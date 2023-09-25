@@ -88,7 +88,6 @@ function optionGroup1(
 
   return {
     modules: [Pagination, Navigation],
-    speed: 0,
     // crossFade: true,
     // effect: 'fade',
     speed: 800,
