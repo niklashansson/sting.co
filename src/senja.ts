@@ -42,7 +42,7 @@ export const senja = async function () {
 
         // Filter testimonials with less than 200 charachters of text
         const filteredItems = newItems.filter(
-          (item) => item.text.trim().length < 300 && item.approved
+          (item) => item.text.trim().length < 500 && item.approved
         );
 
         // Create new items and add to list
