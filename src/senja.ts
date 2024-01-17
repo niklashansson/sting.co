@@ -36,7 +36,6 @@ export const senja = async function () {
 
         if (newItems.length >= 3) {
           const swiperComp = testimonialsList.closest('[element="swiper-component"]');
-
           // swiperComp?.classList.add('main-slider_button-wrapper--inactive');
         }
 
@@ -52,7 +51,7 @@ export const senja = async function () {
         });
       })
       .catch((err) => {
-        // console.log(`Error: ${err}`);
+        console.error(`Error: ${err}`);
       });
 
     const createItem = function (testimonial, templateElement) {
@@ -66,10 +65,10 @@ export const senja = async function () {
 
       // Extract testimonial data to template element
       if (mainText) mainText.textContent = testimonial.text;
-      if (fullName) fullName.textContent = testimonial.endorser.name;
-      if (title) title.textContent = testimonial.endorser.tagline;
-      if (avatar && testimonial.endorser.avatar) {
-        avatar.srcset = testimonial.endorser.avatar;
+      if (fullName) fullName.textContent = testimonial.customer_name;
+      if (title) title.textContent = testimonial.customer_tagline;
+      if (avatar && testimonial.customer_avatar) {
+        avatar.srcset = testimonial.customer_avatar;
       } else {
         avatar.srcset =
           'https://uploads-ssl.webflow.com/641d6ce948627926461a831a/6477c67d8aba67c09ead438f_avatar-placeholder.svg';
